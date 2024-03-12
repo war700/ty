@@ -1,0 +1,460 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="nl"><head>
+	
+	<title>Budgetplanner - Budgetplanner</title>
+
+<meta http-equiv="content-language" content="nl">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<meta name="generator" content="Fork CMS">
+<meta name="description" content="Budgetplanner">
+<meta name="keywords" content="Budgetplanner">
+
+
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="image_src" href="/modules/core/layout/images/image_src.jpg">
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="css/screen.css">
+<link rel="stylesheet" type="text/css" media="print" href="css/print.css">
+
+
+<!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="/modules/core/layout/css/ie6.css" />
+	<script src="/modules/core/js/pngfix.js"></script>
+	<script>
+	  DD_belatedPNG.fix('.pngfix');
+	</script>
+<![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/modules/core/layout/css/ie7.css" /><![endif]-->
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+
+</head>
+<body class="nl onsite">
+	<div id="container">
+		<div id="header">
+			<div id="top">
+
+				<div id="logo">
+					<h1><a href="/" title="Budgetplanner">Budgetplanner</a></h1>
+				</div>
+
+			</div>
+
+			<div id="navigation" class="clearfix">
+				<ul>
+	<li>
+		<a href="/" title="Home">Home</a>
+</li>
+	<li class="selected">
+		<a href="/budgetplanner" title="Budgetplanner">Budgetplanner</a>
+</li>
+	<li>
+		<a href="/over-budgetplanner" title="Over budgetplanner">Over budgetplanner</a>
+</li>
+</ul>
+
+			</div>
+		</div>
+
+		<div id="main" class="clearfix">
+			
+			
+<div id="extraWrapper" class="clearfix">
+	<div id="contentWrapper" class="clearfix">
+		<div id="subnavigation" class="pngfix clearfix">
+			<ul>
+				<li id="step1" class="selected"><a href="/budgetplanner"><b>�&nbsp;</b><span>1. Inkomsten</span><i>�&nbsp;</i></a></li>
+				<li id="step2"><a href="/budgetplanner/p/stap-2"><b>�&nbsp;</b><span>2. Uitgaven</span><i>�&nbsp;</i></a></li>
+				<li id="step3"><a href="/budgetplanner/p/stap-3"><b>�&nbsp;</b><span>3. Sparen</span><i>�&nbsp;</i></a></li>
+				<li id="step4"><a href="/budgetplanner/p/stap-4"><b>�&nbsp;</b><span>4. Resultaat</span><i>�&nbsp;</i></a></li>
+				<li id="step5"><a href="/budgetplanner/p/stap-5"><b>�&nbsp;</b><span>5. Advies</span><i>�&nbsp;</i></a></li>
+			</ul>
+		</div>
+
+		<div id="content">
+			<h1>1. Inkomsten</h1>
+
+			<form id="budgetplanner" action="" method="post">
+				<input type="hidden" name="form" value="budgetplanner">
+				<fieldset>
+					<table>
+						<tbody>
+							
+							<tr class="header">
+								<th>Werk</th>
+								<th>Partner 1</th>
+								<th>Partner 2</th>
+								<th class="alignRight">Totaal</th>
+							</tr>
+							<tr>
+								<td>Loon</td>
+								<td>€ <input type="text" id="1_1_1_1" name="1_1_1_1" value="" class="inputText"> <label>/ maand</label></td>
+								<td>€ <input type="text" id="1_1_1_2" name="1_1_1_2" value="" class="inputText"> <label>/ maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_1_1_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Maaltijdcheques</td>
+								<td>€ <input type="text" id="1_1_2_1" name="1_1_2_1" value="" class="inputText"> <label>/ maand</label></td>
+								<td>€ <input type="text" id="1_1_2_2" name="1_1_2_2" value="" class="inputText"> <label>/ maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_1_2_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Ecocheques</td>
+								<td>€ <input type="text" id="1_1_6_1" name="1_1_6_1" value="" class="inputText"> <label>/ jaar</label></td>
+								<td>€ <input type="text" id="1_1_6_2" name="1_1_6_2" value="" class="inputText"> <label>/ jaar</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_1_6_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>13e maand / Eindejaarspremie</td>
+								<td>€ <input type="text" id="1_1_3_1" name="1_1_3_1" value="" class="inputText"> <label>/ jaar</label></td>
+								<td>€ <input type="text" id="1_1_3_2" name="1_1_3_2" value="" class="inputText"> <label>/ jaar</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_1_3_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Vakantiegeld</td>
+								<td>€ <input type="text" id="1_1_5_1" name="1_1_5_1" value="" class="inputText"> <label>/ jaar</label></td>
+								<td>€ <input type="text" id="1_1_5_2" name="1_1_5_2" value="" class="inputText"> <label>/ jaar</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_1_5_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>(On)kostenvergoeding</td>
+								<td>€ <input type="text" id="1_1_7_1" name="1_1_7_1" value="" class="inputText"> <label>/ maand</label></td>
+								<td>€ <input type="text" id="1_1_7_2" name="1_1_7_2" value="" class="inputText"> <label>/ maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_1_7_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Andere</td>
+								<td>€ <input type="text" id="1_1_4_1" name="1_1_4_1" value="" class="inputText"> <label>/ maand</label></td>
+								<td>€ <input type="text" id="1_1_4_2" name="1_1_4_2" value="" class="inputText"> <label>/ maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_1_4_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+
+							<tr class="spacer">
+								<td colspan="4">�&nbsp;</td>
+							</tr>
+
+							<tr class="header">
+								<th colspan="4">Uitkeringen</th>
+							</tr>
+							<tr>
+								<td>Werkloosheidsuitkering</td>
+								<td>€ <input type="text" id="1_2_1_1" name="1_2_1_1" value="" class="inputText"> <label>/ maand</label></td>
+								<td>€ <input type="text" id="1_2_1_2" name="1_2_1_2" value="" class="inputText"> <label>/ maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_2_1_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Ziektevergoeding</td>
+								<td>€ <input type="text" id="1_2_2_1" name="1_2_2_1" value="" class="inputText"> <label>/ maand</label></td>
+								<td>€ <input type="text" id="1_2_2_2" name="1_2_2_2" value="" class="inputText"> <label>/ maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_2_2_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Pensioen</td>
+								<td>€ <input type="text" id="1_2_3_1" name="1_2_3_1" value="" class="inputText"> <label>/ maand</label></td>
+								<td>€ <input type="text" id="1_2_3_2" name="1_2_3_2" value="" class="inputText"> <label>/ maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_2_3_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Leefloon</td>
+								<td>€ <input type="text" id="1_2_4_1" name="1_2_4_1" value="" class="inputText"> <label>/ maand</label></td>
+								<td>€ <input type="text" id="1_2_4_2" name="1_2_4_2" value="" class="inputText"> <label>/ maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_2_4_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Tegemoetkoming<br>aan personen met<br>een handicap</td>
+								<td>€ <input type="text" id="1_2_5_1" name="1_2_5_1" value="" class="inputText"> <label>/ maand</label></td>
+								<td>€ <input type="text" id="1_2_5_2" name="1_2_5_2" value="" class="inputText"> <label>/ maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_2_5_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Kinderbijslag</td>
+								<td>€ <input type="text" id="1_2_6_1" name="1_2_6_1" value="" class="inputText"> <label>/ maand</label></td>
+								<td>€ <input type="text" id="1_2_6_2" name="1_2_6_2" value="" class="inputText"> <label>/ maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_2_6_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Onderhoudsgeld</td>
+								<td>€ <input type="text" id="1_2_7_1" name="1_2_7_1" value="" class="inputText"> <label>/ maand</label></td>
+								<td>€ <input type="text" id="1_2_7_2" name="1_2_7_2" value="" class="inputText"> <label>/ maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_2_7_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Andere</td>
+								<td>€ <input type="text" id="1_2_8_1" name="1_2_8_1" value="" class="inputText"> <label>/ maand</label></td>
+								<td>€ <input type="text" id="1_2_8_2" name="1_2_8_2" value="" class="inputText"> <label>/ maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_2_8_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+
+							<tr class="spacer">
+								<td colspan="4">�&nbsp;</td>
+							</tr>
+
+							<tr class="header">
+								<th colspan="4">Onregelmatige inkomsten</th>
+							</tr>
+							<tr>
+								<td>Teruggave belastingen</td>
+								<td>€ <input type="text" id="1_3_1_1" name="1_3_1_1" value="" class="inputText"> <label>/ jaar</label></td>
+								<td>€ <input type="text" id="1_3_1_2" name="1_3_1_2" value="" class="inputText"> <label>/ jaar</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_3_1_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Huursubsidie</td>
+								<td>€ <input type="text" id="1_3_2_1" name="1_3_2_1" value="" class="inputText"> <label>/ 3 maand</label></td>
+								<td>€ <input type="text" id="1_3_2_2" name="1_3_2_2" value="" class="inputText"> <label>/ 3 maand</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_3_2_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Weerverletzegels</td>
+								<td>€ <input type="text" id="1_3_3_1" name="1_3_3_1" value="" class="inputText"> <label>/ jaar</label></td>
+								<td>€ <input type="text" id="1_3_3_2" name="1_3_3_2" value="" class="inputText"> <label>/ jaar</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_3_3_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Studiebeurs</td>
+								<td>€ <input type="text" id="1_3_4_1" name="1_3_4_1" value="" class="inputText"> <label>/ jaar</label></td>
+								<td>€ <input type="text" id="1_3_4_2" name="1_3_4_2" value="" class="inputText"> <label>/ jaar</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_3_4_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Getrouwheidspremie</td>
+								<td>€ <input type="text" id="1_3_5_1" name="1_3_5_1" value="" class="inputText"> <label>/ jaar</label></td>
+								<td>€ <input type="text" id="1_3_5_2" name="1_3_5_2" value="" class="inputText"> <label>/ jaar</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_3_5_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Zorgverzekering</td>
+								<td>€ <input type="text" id="1_3_6_1" name="1_3_6_1" value="" class="inputText"> <label>/ jaar</label></td>
+								<td>€ <input type="text" id="1_3_6_2" name="1_3_6_2" value="" class="inputText"> <label>/ jaar</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_3_6_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+							<tr>
+								<td>Andere</td>
+								<td>€ <input type="text" id="1_3_7_1" name="1_3_7_1" value="" class="inputText"> <label>/ jaar</label></td>
+								<td>€ <input type="text" id="1_3_7_2" name="1_3_7_2" value="" class="inputText"> <label>/ jaar</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_3_7_3">0.00</strong> <small>/ maand</small></td>
+							</tr>
+
+							<tr class="spacer">
+								<td colspan="4">�&nbsp;</td>
+							</tr>
+
+							<tr class="header">
+								<th colspan="4">Andere inkomsten</th>
+							</tr>
+							<tr>
+								<td>Andere inkomsten</td>
+								<td>€ <input type="text" id="1_4_1_1" name="1_4_1_1" value="" class="inputText"> <label>/ jaar</label></td>
+								<td>€ <input type="text" id="1_4_1_2" name="1_4_1_2" value="" class="inputText"> <label>/ jaar</label></td>
+								<td class="alignRight">€ <strong class="totalMonth" id="1_4_1_3">0</strong> <small>/ maand</small></td>
+							</tr>
+
+							<tr class="spacer">
+								<td colspan="4">�&nbsp;</td>
+							</tr>
+						</tbody>
+
+						<tfoot>
+							<tr class="total">
+								<th>Totaal inkomsten</th>
+								<td>�&nbsp;</td>
+								<td>�&nbsp;</td>
+								<td class="alignRight">€ <strong id="total1">0.00</strong> <small>/ maand</small></td>
+							</tr>
+						</tfoot>
+					</table>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<div id="side">
+		<div id="overview">
+			<div class="innerWrapper">
+				<h3>Overzicht</h3>
+				<table>
+					<tbody>
+						<tr>
+							<th>Inkomsten</th>
+							<td class="alignRight price">€ <strong id="total1Split">0.<span>00</span></strong> <small>/ maand</small></td>
+						</tr>
+						<tr>
+							<th>Uitgaven</th>
+							<td class="alignRight price">€ <strong id="total2Split">0.<span>00</span></strong> <small>/ maand</small></td>
+						</tr>
+						<tr>
+							<th>Sparen</th>
+							<td class="alignRight price">€ <strong id="total3Split">0.<span>00</span></strong> <small>/ maand</small></td>
+						</tr>
+						<tr id="grandtotal" class="total positive">
+							<th>Overschot</th>
+							<td class="alignRight price">€ <strong id="totalSplit">0.<span>00</span></strong> <small>/ maand</small></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="pagination" class="clearfix">
+	<a class="button" id="next" href="#"><span>Volgende ›</span><i>�&nbsp;</i></a>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+	/**
+	 * Use link as button
+	 */
+	$('#next').click(function(evt)
+	{
+		// don't follow link
+		evt.preventDefault();
+
+		// but submit form
+		$('#budgetplanner').submit();
+	});
+
+
+	/**
+	 * Parse number as float (or 0 if NaN)
+	 */
+	function parseNum(num)
+	{
+		num = num.replace(',', '.');
+		num = parseFloat(num);
+		if(isNaN(num)) num = 0;
+		return num;
+	}
+
+
+	/**
+	 * Number format
+	 */
+	function displayNum(num)
+	{
+		return num.toFixed(2);
+	}
+
+
+	/**
+	 * Set grand total
+	 */
+	function calculateTotal()
+	{
+		var total = 0;
+
+		// calculate total
+		$('.totalMonth').each(function() { total += parseNum($(this).html()); });
+
+		// total color
+		if(total - parseNum(parseNum($('#total2Split').html()) + '.' + $('#total2Split span').html()) - parseNum(parseNum($('#total3Split').html()) + '.' + $('#total3Split span').html()) < 0) $('#grandtotal').removeClass('positive').addClass('negative');
+		else $('#grandtotal').removeClass('negative').addClass('positive');
+
+		// fill in total (bottom)
+		$('#total1').html(displayNum(total));
+
+		// fill in total (right hand side)
+		total1 = String(displayNum(total));
+		$('#total1Split').html(total1.substr(0, total1.indexOf('.')) + '.<span>' + total1.substr(total1.indexOf('.') + 1) + '</span>');
+
+		// fill in total (right hand side)
+		total = String(displayNum(total - parseNum(parseNum($('#total2Split').html()) + '.' + $('#total2Split span').html()) - parseNum(parseNum($('#total3Split').html()) + '.' + $('#total3Split span').html())));
+		$('#totalSplit').html(total.substr(0, total.indexOf('.')) + '.<span>' + total.substr(total.indexOf('.') + 1) + '</span>');
+	}
+
+
+	/**
+	 * Set default values
+	 */
+	$('#1_1_1_3').html(displayNum(parseNum($('#1_1_1_1').val()) + parseNum($('#1_1_1_2').val())));
+	$('#1_1_2_3').html(displayNum(parseNum($('#1_1_2_1').val()) + parseNum($('#1_1_2_2').val())));
+	$('#1_1_3_3').html(displayNum(parseNum($('#1_1_3_1').val()) / 12 + parseNum($('#1_1_3_2').val()) / 12));
+	$('#1_1_4_3').html(displayNum(parseNum($('#1_1_4_1').val()) + parseNum($('#1_1_4_2').val())));
+	$('#1_1_5_3').html(displayNum(parseNum($('#1_1_5_1').val()) / 12 + parseNum($('#1_1_5_2').val()) / 12));
+	$('#1_1_6_3').html(displayNum(parseNum($('#1_1_6_1').val()) / 12 + parseNum($('#1_1_6_2').val()) / 12));
+	$('#1_1_7_3').html(displayNum(parseNum($('#1_1_7_1').val()) + parseNum($('#1_1_7_2').val())));
+
+	$('#1_2_1_3').html(displayNum(parseNum($('#1_2_1_1').val()) + parseNum($('#1_2_1_2').val())));
+	$('#1_2_2_3').html(displayNum(parseNum($('#1_2_2_1').val()) + parseNum($('#1_2_2_2').val())));
+	$('#1_2_3_3').html(displayNum(parseNum($('#1_2_3_1').val()) + parseNum($('#1_2_3_2').val())));
+	$('#1_2_4_3').html(displayNum(parseNum($('#1_2_4_1').val()) + parseNum($('#1_2_4_2').val())));
+	$('#1_2_5_3').html(displayNum(parseNum($('#1_2_5_1').val()) + parseNum($('#1_2_5_2').val())));
+	$('#1_2_6_3').html(displayNum(parseNum($('#1_2_6_1').val()) + parseNum($('#1_2_6_2').val())));
+	$('#1_2_7_3').html(displayNum(parseNum($('#1_2_7_1').val()) + parseNum($('#1_2_7_2').val())));
+	$('#1_2_8_3').html(displayNum(parseNum($('#1_2_8_1').val()) + parseNum($('#1_2_8_2').val())));
+
+	$('#1_3_1_3').html(displayNum(parseNum($('#1_3_1_1').val()) / 12 + parseNum($('#1_3_1_2').val()) / 12));
+	$('#1_3_2_3').html(displayNum(parseNum($('#1_3_2_1').val()) / 3 + parseNum($('#1_3_2_2').val()) / 3));
+	$('#1_3_3_3').html(displayNum(parseNum($('#1_3_3_1').val()) / 12 + parseNum($('#1_3_3_2').val()) / 12));
+	$('#1_3_4_3').html(displayNum(parseNum($('#1_3_4_1').val()) / 12 + parseNum($('#1_3_4_2').val()) / 12));
+	$('#1_3_5_3').html(displayNum(parseNum($('#1_3_5_1').val()) / 12 + parseNum($('#1_3_5_2').val()) / 12));
+	$('#1_3_6_3').html(displayNum(parseNum($('#1_3_6_1').val()) / 12 + parseNum($('#1_3_6_2').val()) / 12));
+	$('#1_3_7_3').html(displayNum(parseNum($('#1_3_7_1').val()) / 12 + parseNum($('#1_3_7_2').val()) / 12));
+
+	$('#1_4_1_3').html(displayNum(parseNum($('#1_4_1_1').val()) / 12 + parseNum($('#1_4_1_2').val()) / 12));
+
+//	calculateTotal();
+
+
+	/**
+	 * Calculations
+	 */
+	$('#1_1_1_1, #1_1_1_2').keyup(function() { $('#1_1_1_3').html(displayNum(parseNum($('#1_1_1_1').val()) + parseNum($('#1_1_1_2').val()))); calculateTotal(); });
+	$('#1_1_2_1, #1_1_2_2').keyup(function() { $('#1_1_2_3').html(displayNum(parseNum($('#1_1_2_1').val()) + parseNum($('#1_1_2_2').val()))); calculateTotal(); });
+	$('#1_1_3_1, #1_1_3_2').keyup(function() { $('#1_1_3_3').html(displayNum(parseNum($('#1_1_3_1').val()) / 12 + parseNum($('#1_1_3_2').val()) / 12)); calculateTotal(); });
+	$('#1_1_4_1, #1_1_4_2').keyup(function() { $('#1_1_4_3').html(displayNum(parseNum($('#1_1_4_1').val()) + parseNum($('#1_1_4_2').val()))); calculateTotal(); });
+	$('#1_1_5_1, #1_1_5_2').keyup(function() { $('#1_1_5_3').html(displayNum(parseNum($('#1_1_5_1').val()) / 12 + parseNum($('#1_1_5_2').val()) / 12)); calculateTotal(); });
+	$('#1_1_6_1, #1_1_6_2').keyup(function() { $('#1_1_6_3').html(displayNum(parseNum($('#1_1_6_1').val()) / 12 + parseNum($('#1_1_6_2').val()) / 12)); calculateTotal(); });
+	$('#1_1_7_1, #1_1_7_2').keyup(function() { $('#1_1_7_3').html(displayNum(parseNum($('#1_1_7_1').val()) + parseNum($('#1_1_7_2').val()))); calculateTotal(); });
+
+	$('#1_2_1_1, #1_2_1_2').keyup(function() { $('#1_2_1_3').html(displayNum(parseNum($('#1_2_1_1').val()) + parseNum($('#1_2_1_2').val()))); calculateTotal(); });
+	$('#1_2_2_1, #1_2_2_2').keyup(function() { $('#1_2_2_3').html(displayNum(parseNum($('#1_2_2_1').val()) + parseNum($('#1_2_2_2').val()))); calculateTotal(); });
+	$('#1_2_3_1, #1_2_3_2').keyup(function() { $('#1_2_3_3').html(displayNum(parseNum($('#1_2_3_1').val()) + parseNum($('#1_2_3_2').val()))); calculateTotal(); });
+	$('#1_2_4_1, #1_2_4_2').keyup(function() { $('#1_2_4_3').html(displayNum(parseNum($('#1_2_4_1').val()) + parseNum($('#1_2_4_2').val()))); calculateTotal(); });
+	$('#1_2_5_1, #1_2_5_2').keyup(function() { $('#1_2_5_3').html(displayNum(parseNum($('#1_2_5_1').val()) + parseNum($('#1_2_5_2').val()))); calculateTotal(); });
+	$('#1_2_6_1, #1_2_6_2').keyup(function() { $('#1_2_6_3').html(displayNum(parseNum($('#1_2_6_1').val()) + parseNum($('#1_2_6_2').val()))); calculateTotal(); });
+	$('#1_2_7_1, #1_2_7_2').keyup(function() { $('#1_2_7_3').html(displayNum(parseNum($('#1_2_7_1').val()) + parseNum($('#1_2_7_2').val()))); calculateTotal(); });
+	$('#1_2_8_1, #1_2_8_2').keyup(function() { $('#1_2_8_3').html(displayNum(parseNum($('#1_2_8_1').val()) + parseNum($('#1_2_8_2').val()))); calculateTotal(); });
+
+	$('#1_3_1_1, #1_3_1_2').keyup(function() { $('#1_3_1_3').html(displayNum(parseNum($('#1_3_1_1').val()) / 12 + parseNum($('#1_3_1_2').val()) / 12)); calculateTotal(); });
+	$('#1_3_2_1, #1_3_2_2').keyup(function() { $('#1_3_2_3').html(displayNum(parseNum($('#1_3_2_1').val()) / 3 + parseNum($('#1_3_2_2').val()) / 3)); calculateTotal(); });
+	$('#1_3_3_1, #1_3_3_2').keyup(function() { $('#1_3_3_3').html(displayNum(parseNum($('#1_3_3_1').val()) / 12 + parseNum($('#1_3_3_2').val()) / 12)); calculateTotal(); });
+	$('#1_3_4_1, #1_3_4_2').keyup(function() { $('#1_3_4_3').html(displayNum(parseNum($('#1_3_4_1').val()) / 12 + parseNum($('#1_3_4_2').val()) / 12)); calculateTotal(); });
+	$('#1_3_5_1, #1_3_5_2').keyup(function() { $('#1_3_5_3').html(displayNum(parseNum($('#1_3_5_1').val()) / 12 + parseNum($('#1_3_5_2').val()) / 12)); calculateTotal(); });
+	$('#1_3_6_1, #1_3_6_2').keyup(function() { $('#1_3_6_3').html(displayNum(parseNum($('#1_3_6_1').val()) / 12 + parseNum($('#1_3_6_2').val()) / 12)); calculateTotal(); });
+	$('#1_3_7_1, #1_3_7_2').keyup(function() { $('#1_3_7_3').html(displayNum(parseNum($('#1_3_7_1').val()) / 12 + parseNum($('#1_3_7_2').val()) / 12)); calculateTotal(); });
+
+	$('#1_4_1_1, #1_4_1_2').keyup(function() { $('#1_4_1_3').html(displayNum(parseNum($('#1_4_1_1').val()) / 12 + parseNum($('#1_4_1_2').val()) / 12)); calculateTotal(); });
+});
+</script>
+
+		</div>
+
+		<div id="footer" class="clearfix">
+			
+
+<p>© Budgetplanner 2024</p>
+<ul class="footerNavigation floatLeft">
+		<li><a href="/disclaimer-en-privacy" title="Disclaimer en privacy">Disclaimer en privacy</a></li>
+	<li><a href="/sitemap" title="Sitemap">Sitemap</a></li>
+
+	<li><a href="http://www.netlash.com" title="Netlash Webdesign en Grafisch ontwerp">Webdesign Netlash</a></li>
+</ul>
+
+<ul class="footerNavigation noPadding floatRight">
+<li><img src="images/samlogo.png" alt="" width="184" height="38"></li>
+<li><a id="vlo" title="Vlaamse Overheid" href="http://www.vlaanderen.be">Vlaamse Overheid</a></li>
+</ul>
+
+
+
+		</div>
+
+	</div>
+
+</body></html>

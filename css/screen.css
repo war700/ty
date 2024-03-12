@@ -1,0 +1,1161 @@
+/*
+
+	Stylesheet for Budgetplanner
+
+	Media:      screen, projection
+	Copyright:  Netlash <http://www.netlash.com>
+	Author:     Thomas Deceuninck <thomasdeceuninck@netlash.com>
+
+*/
+
+/*
+	Reset
+*/
+
+body, form, ol, ul, dl, li, dt, dd, td, th ,tr, h1, h2, h3, h4, h5, h6, p, pre, blockquote, address { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+img { border:0; }
+fieldset { margin: 0; padding: 0; border: 0; }
+input, select, textarea { font-size: 100%; vertical-align: middle; }
+table { border-collapse: collapse; border-spacing: 0; empty-cells: show; }
+th { text-align: left; }
+a:focus { overflow: hidden; }
+
+/*
+	Clearfix
+*/
+
+.clearfix:after,
+#header:after,
+#navigation:after,
+#navigation ul:after,
+#main:after,
+#subnavigation:after,
+#subnavigation ul:after,
+#footer:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/*
+	General
+*/
+
+body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 1.6;
+	color: #2C2C2C;
+	background: #F1EEE9;
+}
+
+/*
+	Typography and text styles
+*/
+
+/* General */
+
+p {
+	padding: 0 0 12px 0;
+}
+
+strong, th, thead td, h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
+h1, h2, h3, h4 {
+	font-family: Georgia, serif;
+}
+
+/* Headings */
+
+h1 {
+	font-size: 30px;
+	font-weight: 500;
+	padding: 0 0 16px 0;
+	letter-spacing: 0.02em;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: 500;
+	padding: 0 0 16px 0;
+	letter-spacing: 0.02em;
+}
+
+h3 {
+	font-size: 16px;
+	font-weight: 200;
+	padding: 0 0 6px 0;
+	letter-spacing: 0.02em;
+}
+
+h4 {
+	font-size: 14px;
+	font-weight: 200;
+	padding: 0 0 6px 0;
+}
+
+/* Links */
+
+a {
+	border-bottom: 1px solid #98B3ED;
+	text-decoration: none;
+}
+
+a:link {
+	color: #4272DB;
+	border-color: #98B3ED;
+}
+
+a:visited {
+	color: #1A4DBC;
+	border-color: #98B3ED;
+}
+
+a:hover {
+	color: #4272DB;
+	border-color: #4272DB;
+}
+
+a:active {
+	color: #000;
+	border-color: #000;
+}
+
+a:focus {
+	color: #000;
+	border-color: #000;
+}
+
+/* .content defaults */
+
+.content p {
+	padding-bottom: 18px;
+}
+
+.content ul {
+	list-style: none;
+	padding: 0 0 12px 0;
+}
+
+	.content ul li {
+		padding: 0 0 3px 24px;
+		background: url(../images/content-bullet.gif) no-repeat 6px 6px;
+	}
+
+.content ol {
+	list-style-type: decimal;
+	padding: 0 0 12px 24px;
+}
+
+.content dl {
+	padding-bottom: 12px;
+}
+
+.content ul ul,
+.content ul ol,
+.content ol ul,
+.content ol ol {
+	padding-bottom: 0;
+}
+
+.content code {
+	font-family: Monaco, "Courier New", monospace;
+}
+
+.content pre {
+	font-size: 12px;
+	line-height: 18px;
+	background: #F5F5F5;
+	margin: 0 0 12px 0;
+	padding: 10px;
+}
+
+.content blockquote,
+.content q {
+	font-style: italic;
+	color: #666;
+}
+
+.content blockquote {
+	padding: 0 10px;
+	padding: 12px 0;
+}
+
+.content cite,
+.content em {
+	font-style: italic;
+}
+
+.content table {
+	border-top: 1px solid #827E77;
+	border-left: 1px solid #827E77;
+	margin: 20px 0;
+}
+
+.content table caption {
+	display:none;
+}
+
+.content td,
+.content th {
+	border-right: 1px solid #827E77;
+	border-bottom: 1px solid #827E77;
+	font-size: 11px;
+	padding: 10px;
+}
+
+.content th {
+	font-family: Georgia, serif;
+	font-weight: 700;
+	padding: 10px;
+}
+
+.content img {
+	max-width: 475px;
+	padding: 0 10px 0 10px;
+}
+
+.content form {
+	margin-bottom: 20px;
+}
+
+	.content form p {
+		padding-bottom: 10px;
+	}
+
+		.content form p label {
+			float: left;
+			width: 150px;
+			padding-top: 2px;
+		}
+
+		div.hr hr {
+			display: none;
+		}
+
+		div.hr {
+			clear: both;
+			height: 1px;
+			margin: 12px 0;
+			background: #D1CECA;
+		}
+
+/*
+	Page structure and layout
+*/
+
+#container {
+width: 980px;
+margin: 0 auto;
+position: relative;
+background: #FFF url(../images/green-line.gif) repeat-y top left;
+}
+
+/*
+	Header
+*/
+
+#header {
+	padding: 40px 0 34px 0;
+}
+
+#home #header {
+	padding-bottom: 0; /* No padding on homepage */
+}
+
+	/* Logo */
+
+	#logo h1 {
+		width: 280px;
+		height: 90px;
+		background: url(../images/logo.png) no-repeat;
+		text-indent: -9999px;
+		position: absolute;
+		top: 40px;
+		left: 0;
+		padding: 0;
+	}
+
+		#logo h1 a {
+			width: 100%;
+			height: 100%;
+			display: block;
+			overflow: hidden;
+			border: none;
+		}
+
+	/* Navigation */
+
+	#navigation {
+		background: url(../images/navigation_backgr.gif) repeat-x top left;
+		height: 90px;
+		padding: 0 0 0 280px;
+		font-family: Verdana, Arial, sans-serif;
+	}
+
+		#navigation ul li {
+			float: left;
+			border-left: 1px solid #4E4C47;
+			height: 84px;
+		}
+
+			#navigation ul li a {
+				float: left;
+				display: block;
+				border-bottom: none;
+				color: #FFF;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.02em;
+				padding: 40px 28px 25px 28px;
+			}
+
+			/* link states */
+			#navigation ul li a:link,
+			#navigation ul li a:visited {
+				color: #FFF;
+			}
+
+			#navigation ul li a:hover,
+			#navigation ul li a:active,
+			#navigation ul li a:focus {
+				background-color: #45433F;
+				color: #FFF;
+			}
+
+			/* selected link states */
+			#navigation ul li.selected a:link,
+			#navigation ul li.selected a:visited,
+			#navigation ul li.selected a:hover,
+			#navigation ul li.selected a:active,
+			#navigation ul li.selected a:focus {
+				background-color: #4E4C47;
+				color: #FFF;
+			}
+
+/*
+	Content
+*/
+
+#main {
+	padding: 0 8px 20px 30px;
+}
+
+	#extraWrapper {
+		background: url(../images/content-backgr.gif) repeat-y 664px 0;
+	}
+
+	#contentWrapper {
+		width: 638px;
+		float: left;
+	}
+
+	/* Subnavigation */
+
+	#subnavigation {
+		font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+		height: 34px;
+		background: url(../images/subnavigation_list_bg.png) repeat-x;
+	}
+
+		#subnavigation ul li {
+			float: left;
+			height: 34px;
+		}
+
+			#subnavigation ul li a,
+			#subnavigation ul li a b,
+			#subnavigation ul li a span,
+			#subnavigation ul li a i {
+				float: left;
+				display: block;
+				border-bottom: none;
+				line-height: 34px;
+				font-weight: 700;
+				background: url(../images/subnavigation_bg.png) center top;
+			}
+
+			#subnavigation ul li a span {
+				padding: 0 10px;
+			}
+
+			#subnavigation ul li a i,
+			#subnavigation ul li a b {
+				text-indent: -9999px;
+				width: 9px;
+			}
+
+			/* link states */
+			#subnavigation ul li a:link,
+			#subnavigation ul li a:visited {
+				background: none;
+				color: #4E4C47;
+			}
+
+				#subnavigation ul li a:hover span,
+				#subnavigation ul li a:active span,
+				#subnavigation ul li a:focus span {
+					background-position: center top;
+				}
+
+				#subnavigation ul li a:link i,
+				#subnavigation ul li a:visited i,
+				#subnavigation ul li a:hover i,
+				#subnavigation ul li a:active i,
+				#subnavigation ul li a:focus i {
+					background-position: right top;
+					color: #4E4C47;
+				}
+
+				#subnavigation ul li a:link b,
+				#subnavigation ul li a:visited b,
+				#subnavigation ul li a:hover b,
+				#subnavigation ul li a:active b,
+				#subnavigation ul li a:focus b {
+					background-position: left top;
+					color: #4E4C47;
+				}
+
+				/* Fix background first arrow */
+				#subnavigation ul #step1 a:link b,
+				#subnavigation ul #step1 a:visited b,
+				#subnavigation ul #step1 a:hover b,
+				#subnavigation ul #step1 a:active b
+				#subnavigation ul #step1 a:focus b {
+					background-position: left -36px;
+				}
+
+			/* selected link states */
+			#subnavigation ul li.selected a:link b,
+			#subnavigation ul li.selected a:visited b,
+			#subnavigation ul li.selected a:hover b,
+			#subnavigation ul li.selected a:active b,
+			#subnavigation ul li.selected a:focus b {
+				background-position: left -72px;
+				color: #FFF;
+			}
+
+			#subnavigation ul li.selected a:link span,
+			#subnavigation ul li.selected a:visited span,
+			#subnavigation ul li.selected a:hover span,
+			#subnavigation ul li.selected a:active span,
+			#subnavigation ul li.selected a:focus span {
+				background-position: center -72px;
+				color: #FFF;
+			}
+
+			#subnavigation ul li.selected a:link i,
+			#subnavigation ul li.selected a:visited i,
+			#subnavigation ul li.selected a:hover i,
+			#subnavigation ul li.selected a:active i,
+			#subnavigation ul li.selected a:focus i {
+				background-position: right -72px;
+				color: #FFF;
+			}
+
+			/* Fix background first arrow */
+			#subnavigation ul #step1.selected a:link b,
+			#subnavigation ul #step1.selected a:visited b,
+			#subnavigation ul #step1.selected a:hover b,
+			#subnavigation ul #step1.selected a:active b
+			#subnavigation ul #step1.selected a:focus b {
+				background-position: left -108px;
+				color: #FFF;
+			}
+
+			/* Fix arrow position */
+			#subnavigation ul #step2,
+			#subnavigation ul #step3,
+			#subnavigation ul #step4,
+			#subnavigation ul #step5 {
+				position: relative;
+			}
+
+			#subnavigation ul #step2 {
+				left: -9px;
+			}
+
+			#subnavigation ul #step3 {
+				left: -18px;
+			}
+
+			#subnavigation ul #step4 {
+				left: -27px;
+			}
+
+			#subnavigation ul #step5 {
+				left: -36px;
+			}
+
+	/* Actual Content */
+
+	#content {
+		padding-top: 16px;
+	}
+
+	#budgetplanner {
+		font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+	}
+
+		/* Table */
+
+		#content table {
+			width: 100%;
+		}
+
+			#content table tr {
+				border-bottom: 1px solid #E5E2DD;
+			}
+
+			#content table tr:hover,
+			#content table tr.activeRow {
+				background-color: #F1EEE9;
+			}
+
+			#content table tr.spacer:hover {
+				background: none;
+			}
+
+				#content table tr td {
+					padding: 5px 6px;
+				}
+
+				#content table tr td label,
+				#content table tr td select {
+					font-size: 11px;
+				}
+
+				#content table tr td strong {
+					font-family: Courier, monospace;
+					font-weight: 700;
+					font-size: 13px;
+				}
+
+					#content table tr td strong span {
+						font-size: 16px;
+					}
+
+				#content table tr td small {
+					font-size: 11px;
+					font-weight: 500;
+				}
+
+				#content table tr td span.info {
+					background: url(../images/info_icon.gif) no-repeat 0 9px;
+					padding: 10px;
+					margin-left: 6px;
+				}
+
+				#content table tr td input.inputText {
+					width: 60px;
+					margin-right: 2px;
+				}
+
+				/* Headers */
+
+				#content table tr.header {
+					background: url(../images/subcategory_header_bg.png) repeat-x;
+				}
+
+					#content table tr.header th {
+						color: #45433F;
+						padding: 6px;
+					}
+
+				/* Total */
+
+				#content table tr.total {
+					background: #6B6966;
+					color: #FFF;
+				}
+
+					#content table tr.total th {
+						padding-left: 6px;
+					}
+
+					#content table tr.total td {
+						font-size: 16px;
+					}
+
+						#content table tr.total td strong {
+							font-size: 16px;
+						}
+
+					#content table tr.total td span {
+						font-size: 12px;
+						font-family: Courier, monospace;
+					}
+
+		/* Pagination buttons */
+
+		#pagination {
+			width: 638px;
+			float: left;
+			padding-top: 24px;
+		}
+
+			#pagination a.button {
+				float: right;
+			}
+
+			#pagination #next {
+				margin-left: 10px;
+				border-left: 1px solid #D4D0CA;
+			}
+
+			#next:hover {
+				border-left: 1px solid #63615D;
+			}
+
+			#pagination #previous {
+				border-right: 1px solid #D4D0CA;
+				border-left: none;
+			}
+
+	/* Side */
+
+	#side {
+		float: right;
+		width: 278px;
+	}
+
+		.sideBlock {
+			width: 200px;
+		}
+
+			.sideBlock h2 {
+				font-size: 18px;
+				padding-bottom: 8px;
+			}
+
+			.sideBlock h3 {
+				padding-bottom: 12px;
+			}
+
+		#side #income,
+		#side #expense {
+			margin: 0 0 12px 28px;
+			border-bottom: 1px solid #D6D2CC;
+		}
+
+		#side #saving {
+			margin-left: 28px;
+		}
+
+		#side #result {
+			background: #AED42C url(../images/overview_bg.png) no-repeat 0 bottom;
+			padding: 12px 28px;
+			margin-bottom: 12px;
+		}
+
+		#side #startBudgetting {
+			margin-left: 28px;
+		}
+
+		/* Overview */
+
+		#overview {
+			font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+			background: url(../images/overview_repeat_bg.png) repeat-y 0 top;
+			width: 278px;
+			position: fixed;
+		}
+
+			#overview .innerWrapper {
+				background: url(../images/overview_bg.png) no-repeat 0 bottom;
+				padding: 12px 16px 14px 20px;
+				width: 242px;
+				overflow: hidden;
+			}
+
+			#overview table {
+				width: 100%;
+			}
+
+				#overview table tr {
+					border-top: 1px solid #99BB22;
+					overflow: hidden;
+				}
+
+				#overview table tr.total {
+					border-top: none;
+					background: #DDDF11;
+					padding-top: 6px;
+					width: 242px;
+				}
+
+				#overview table tr.positive {
+					background: #B3DA2B;
+				}
+
+				#overview table tr.negative {
+					background: #D46F6F;
+				}
+
+					#overview table tr th {
+						font-weight: 500;
+						font-size: 13px;
+						padding: 6px 0 6px 6px;
+					}
+
+					#overview table tr.total th {
+						font-weight: 700;
+					}
+
+					#overview table tr td {
+						padding-right: 6px;
+					}
+
+						#overview table tr td.price {
+							font-size: 16px;
+							font-weight: 700;
+							overflow: hidden;
+						}
+
+							#overview table tr td.price small {
+								font-size: 11px;
+								font-weight: 500;
+							}
+
+						#overview table tr td strong {
+							font-family: Courier, monospace;
+							font-weight: 700;
+							font-size: 16px;
+						}
+
+							#overview table tr td strong span {
+								font-size: 12px;
+							}
+
+	/* Home */
+
+	#home #main {
+		padding: 40px 0 24px 30px;
+		margin-right: 24px;
+		background: url(../images/home_bg.png) no-repeat right top;
+	}
+
+		#home #intro {
+			width: 655px;
+			font-family: Verdana, Arial, sans-serif;
+			font-size: 13px;
+			padding-bottom: 18px;
+		}
+
+		#wizardOverview {
+			background: url(../images/wizard_overview_bg.png) no-repeat;
+			height: 167px;
+			padding: 24px 0;
+		}
+
+			#wizardOverview .wizardBlock {
+				width: 192px;
+				padding: 0 20px;
+				float: left;
+				font-size: 11px;
+			}
+
+			#wizardOverview #result {
+				float: right;
+			}
+
+			#wizardOverview .wizardBlock.firstChild {
+				padding-left: 0;
+			}
+
+				#wizardOverview .wizardBlock h2 {
+					font-size: 18px;
+					letter-spacing: 0;
+					padding-bottom: 8px;
+				}
+
+			/* Icons */
+
+			#income h2 {
+				background: url(../images/home_icons.gif) no-repeat right -3px;
+			}
+
+			#expense h2 {
+				background: url(../images/home_icons.gif) no-repeat right -52px;
+			}
+
+			#saving h2 {
+				background: url(../images/home_icons.gif) no-repeat right -100px;
+			}
+
+			#result h2 {
+				background: url(../images/home_icons.gif) no-repeat right -154px;
+			}
+
+		/* Start budget button */
+
+		#startBudgetting {
+			padding-top: 12px;
+		}
+
+		#startBudgetting a.button {
+			color: #FFF;
+			border-left: 1px solid #345AAC;
+		}
+
+		/* link states */
+		#startBudgetting a.button:link span,
+		#startBudgetting a.button:visited span {
+			background-position: center -216px;
+			padding: 0 12px;
+			color: #FFF;
+		}
+
+		#startBudgetting a.button:link i,
+		#startBudgetting a.button:visited i {
+			background-position: right -216px;
+		}
+
+		#startBudgetting a.button:hover span,
+		#startBudgetting a.button:active span,
+		#startBudgetting a.button:focus span {
+			background-position: center -252px;
+		}
+
+		#startBudgetting a.button:hover i,
+		#startBudgetting a.button:active i,
+		#startBudgetting a.button:focus i {
+			background-position: right -252px;
+		}
+
+/*
+	Footer
+*/
+
+#footer {
+	font-family: Verdana, Arial, sans-serif;
+	margin: 10px 0 0 6px;
+	padding: 20px 36px 20px 0;
+	background: #E6E3DE;
+	font-size: 11px;
+	color: #3C3C3C;
+}
+
+	#footer .footerNavigation a:link,
+	#footer .footerNavigation a:visited {
+		color: #3C3C3C;
+		border-color: #D4D4D4;
+	}
+
+		#footer .footerNavigation a:visited {
+			color: #383838;
+		}
+
+	#footer .footerNavigation a:hover,
+	#footer .footerNavigation a:active,
+	#footer .footerNavigation a:focus {
+		border-color: #383838;
+	}
+
+	#footer .footerNavigation {
+		padding-top: 15px;
+	}
+
+	#footer p {
+		float: left;
+		padding: 15px 0 15px 30px;
+	}
+
+		#footer .footerNavigation li{
+			float: left;
+			padding-left: 30px;
+		}
+
+	#vcs, #vlo, #as {
+		display: block;
+		overflow: hidden;
+		border: none;
+		margin-top: 3px;
+		text-indent: -9999px;
+	}
+
+	#vcs {
+		background: url(../images/schuldbemiddeling-logo.gif) no-repeat;
+		width: 125px;
+		height: 34px;
+		margin-left: 85px;
+	}
+
+	#vlo {
+		background: url(../images/overheid-logo.gif) no-repeat;
+		width: 45px;
+		height: 36px;
+	}
+
+	#as {
+		background: url(../images/as-logo.gif) no-repeat;
+		width: 43px;
+		height: 34px;
+	}
+
+/*
+	Pagination
+*/
+
+.pagination-wrap {
+	width: 100%;
+	overflow: hidden;
+}
+
+.pagination {
+	float: left;
+	position: relative;
+	left: 50%;
+}
+
+.pagination ul {
+	padding: 18px 0;
+	z-index: 2;
+	overflow: hidden;
+	position: relative;
+	left: -50%;
+}
+
+.pagination li {
+	float: left;
+	list-style: none;
+	margin: 0 5px 0 0;
+	text-decoration: none;
+	padding: 0;
+	line-height: 15px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.pagination li span {
+	float: left;
+	display: block;
+	padding: 4px 5px;
+	color: #CCC;
+	min-width: 12px;
+}
+
+.pagination li.currentpage span {
+	font-weight: 700;
+	color: black;
+}
+
+.pagination li.selected span {
+	padding: 4px 5px;
+	font-weight: 700;
+	color: black;
+}
+
+.pagination li a:link,
+.pagination li a:visited {
+	float: left;
+	display: block;
+	padding: 3px 4px;
+	border: 1px solid #DDD;
+	text-decoration: none;
+	min-width: 12px;
+}
+
+li.ellipsis {
+	margin: 0;
+}
+
+li.ellipsis span {
+	color: black;
+}
+
+.pagination li a:hover,
+.pagination li a:active {
+	background: #EEE;
+	border: 1px solid #BBB;
+	color: black;
+}
+
+.nextpage, .previouspage {
+	font-size: 11px !important;
+}
+
+.pagination li.nextpage {
+	margin-left: 10px;
+}
+
+.pagination li.previouspage {
+	margin-right: 15px;
+}
+
+/*
+	Form style
+*/
+
+input, textarea, select, button {
+	font-family: Verdana, sans-serif;
+	border: 1px solid #BAB9B9;
+	color: #2C2C2C;
+}
+
+input.input-submit {
+	background: #FFF url(../images/button-backgr.gif) repeat-x 0 0;
+	color: #565555;
+	text-transform: uppercase;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 6px 2px 6px;
+	cursor: pointer;
+	font-size: 10px;
+}
+
+input.input-submit:hover {
+	color: #FFF;
+	border-color: #67820B;
+	background-position: 0 -22px;
+}
+
+input.input-text {
+	padding: 4px 0 4px 4px;
+	width: 185px;
+}
+
+input:focus,
+textarea:focus {
+	-webkit-box-shadow: 0 0 2px #2C2C2C;
+	-moz-box-shadow: 0 0 2px #2C2C2C;
+	box-shadow: 0 0 2px #2C2C2C;
+	border-color: #2C2C2C;
+}
+
+/* Fix focus in firefox */
+@-moz-document url-prefix() {
+	input[type="text"]:focus,
+	textarea:focus {
+		outline: none;
+		border-color: #2C2C2C;
+	}
+}
+
+/* Fix focus in Chrome/Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	input[type="text"]:focus,
+	textarea:focus {
+		outline: none;
+		border-color: #2C2C2C;
+	}
+}
+
+/*
+	General classes
+*/
+
+.hidden { display: none; }
+.block { display: block; }
+.noPadding { padding: 0 !important; }
+.noMargin { margin: 0 !important; }
+.floatLeft { float: left; }
+.floatRight { float: right; }
+.noBorder { border: none; }
+.alignRight { text-align: right; width: 150px;}
+
+/*
+	Image classes
+*/
+
+img.alignLeft {
+	float: left;
+	padding: 0 10px 10px 0;
+}
+
+img.alignRight {
+	float: right;
+	padding: 0 0 10px 10px;
+}
+
+/*
+	Button classes
+*/
+
+a.button {
+	font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+	float: left;
+	display: block;
+	border: none;
+	border-left: 1px solid #D4D0CA;
+}
+
+	a.button b,
+	a.button span,
+	a.button i {
+		float: left;
+		display: block;
+		line-height: 34px;
+		font-weight: 700;
+		color: #4E4C47;
+		background: url(../images/subnavigation_bg.png) center top;
+	}
+
+	a.button span {
+		padding: 0 12px;
+	}
+
+	a.button i,
+	a.button b {
+		text-indent: -9999px;
+		width: 9px;
+	}
+
+	/* link states */
+	a.button:link span,
+	a.button:visited span {
+		background-position: center top;
+		color: #4E4C47;
+	}
+
+	a.button:hover span,
+	a.button:active span,
+	a.button:focus span {
+		background-position: center -72px;
+		color: #FFF;
+	}
+
+	a.button:link b,
+	a.button:visited b {
+		background-position: left -144px;
+		color: #4E4C47;
+	}
+
+	a.button:hover b,
+	a.button:active b,
+	a.button:focus b {
+		background-position: left -180px;
+		color: #FFF;
+	}
+
+	a.button:link i,
+	a.button:visited i {
+		background-position: right top;
+		color: #4E4C47;
+	}
+
+	a.button:hover i,
+	a.button:active i,
+	a.button:focus i {
+		background-position: right -72px;
+		color: #FFF;
+	}
+
+/* Dev fixes */
+
+div#seeAdvice {
+	margin-bottom: 25px;
+}
+
+div#seeAdvice a.button {
+	border-right: 1px solid #D4D0CA;
+}
+
+form#budgetplanner abbr {
+	border-bottom: none;
+}
